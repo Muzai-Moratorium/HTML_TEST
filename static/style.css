@@ -3,22 +3,18 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(90deg, rgb(120, 122, 189), rgb(238, 205, 144));
+  background: linear-gradient(180deg, rgb(120, 122, 189), rgb(238, 205, 144));
   background-size: 200% 200%;
-  animation: gradientMove 10s ease infinite;
+  animation: SSMove 10s ease infinite;
 }
 
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+@keyframes SSMove {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
 }
+
+
 .wrapper {
   width: 420px;
   background: transparent;
@@ -59,17 +55,22 @@ body {
 .input-box input:hover {
   box-shadow: rgba(0, 0, 0, 0.664) 0px 0px 8px;
   transition: all 0.3s ease;
+  
 }
 
 .input-box input:focus {
   outline: none;
   box-shadow: rgba(0, 0, 0, 0.664) 0px 0px 8px;
   border-color: rgb(255, 255, 255);
+  background-color: #ffffff33;
+  
 }
 
 .input-box input::placeholder {
   color: white;
 }
+
+
 
 .input-box i {
   position: absolute;
@@ -113,6 +114,14 @@ body {
   color: #333;
   font-weight: 600;
 }
+
+
+
+.wrapper .btn:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.664);
+  transition: all 0.1s ease;
+} 
+
 
 .wrapper .register-link {
   text-align: center;
